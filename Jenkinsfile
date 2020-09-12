@@ -17,9 +17,9 @@ pipeline {
 
     stage('Sending result to email') {
       steps {
-        sh ''' b=`cat test.html`
-          '''
-        mail(subject: 'Result', body: cat b, from: 'pschamp01@gmail.com', to: 'durgesh.raj@yahoo.com', bcc: 'sweekrutikayarkar06@gmail.com', cc: 'aditya.family0312@gmail.com', mimeType: 'text/html')
+        
+        mail(subject: 'Result', body: sh ''' b=`cat test.html`
+          ''', from: 'pschamp01@gmail.com', to: 'durgesh.raj@yahoo.com', bcc: 'sweekrutikayarkar06@gmail.com', cc: 'aditya.family0312@gmail.com', mimeType: 'text/html')
       }
     }
 
