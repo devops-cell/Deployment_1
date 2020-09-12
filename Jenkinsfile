@@ -17,7 +17,7 @@ pipeline {
 
     stage('Sending result to email') {
       steps {
-        sh ''' b= `cat test.html`
+        sh ''' b =`cat test.html`
           '''
         mail(subject: 'Result', mimeType: 'text', to: 'pshamp01@gmail.com', from: 'pschamp01@gmail.com', body: 'test')
       }
