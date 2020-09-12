@@ -19,7 +19,7 @@ pipeline {
       steps {
         sh ''' b= `cat test.html`
           '''
-        mail(subject: 'Result', body: 'b' , from: 'pschamp01@gmail.com', to: 'durgesh.raj@yahoo.com', bcc: 'sweekrutikayarkar06@gmail.com', cc: 'aditya.family0312@gmail.com', mimeType: 'text/html')
+        emailext(subject: 'Result', body: 'hello', from: 'pschamp01@gmail.com', mimeType: 'text/html', to: 'pschamp01@gmail.com')
       }
     }
 
