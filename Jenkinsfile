@@ -13,6 +13,7 @@ pipeline {
         stage('s2') {
           steps {
             echo 'hello print'
+            input(message: 'Want to proceed', id: '1', ok: 'yes', submitter: 'durgesh')
           }
         }
 
