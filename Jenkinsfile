@@ -19,7 +19,7 @@ pipeline {
       steps {
         sh ''' b= `cat test.html`
           '''
-        emailext(subject: 'Result', body: $b, from: 'pschamp01@gmail.com', mimeType: 'text/html', to: 'pschamp01@gmail.com')
+        mail(subject: 'Result', mimeType: 'text', to: 'pshamp01@gmail.com', from: 'pschamp01@gmail.com', body: 'test')
       }
     }
 
