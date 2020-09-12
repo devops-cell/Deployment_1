@@ -17,9 +17,8 @@ pipeline {
 
     stage('Sending result to email') {
       steps {
-        sh '''b=`cat test.txt`
-          '''
-        mail(subject: 'Result', body: $b, from: 'pschamp01@gmail.com', to: 'durgesh.raj@yahoo.com', bcc: 'sweekrutikayarkar06@gmail.com', cc: 'aditya.family0312@gmail.com')
+        def b = sh '''cat test.txt'''
+        mail(subject: 'Result', body: b, from: 'pschamp01@gmail.com', to: 'durgesh.raj@yahoo.com', bcc: 'sweekrutikayarkar06@gmail.com', cc: 'aditya.family0312@gmail.com')
       }
     }
 
