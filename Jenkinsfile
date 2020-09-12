@@ -18,7 +18,7 @@ pipeline {
     stage('Sending result to email') {
       steps {
         def proc = "cat test.txt".execute()
-        mail(subject: 'Result', body: $proc, from: 'pschamp01@gmail.com', to: 'durgesh.raj@yahoo.com', bcc: 'sweekrutikayarkar06@gmail.com', cc: 'aditya.family0312@gmail.com')
+        mail(subject: 'Result', body: proc, from: 'pschamp01@gmail.com', to: 'durgesh.raj@yahoo.com', bcc: 'sweekrutikayarkar06@gmail.com', cc: 'aditya.family0312@gmail.com')
       }
     }
 
