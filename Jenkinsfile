@@ -19,7 +19,7 @@ pipeline {
       steps {
         sh ''' b=`cat test.html`
           '''
-        mail(subject: 'Result', body: ${FILE, path="${WORKSPACE}/test.html"}, from: 'pschamp01@gmail.com', to: 'durgesh.raj@yahoo.com', bcc: 'sweekrutikayarkar06@gmail.com', cc: 'aditya.family0312@gmail.com', mimeType: 'text/html')
+        mail(subject: 'Result', body: cat $b, from: 'pschamp01@gmail.com', to: 'durgesh.raj@yahoo.com', bcc: 'sweekrutikayarkar06@gmail.com', cc: 'aditya.family0312@gmail.com', mimeType: 'text/html')
       }
     }
 
