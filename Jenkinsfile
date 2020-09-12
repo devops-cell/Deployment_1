@@ -20,6 +20,7 @@ pipeline {
         stage('s3') {
           steps {
             sh 'echo para'
+            input(message: 'ddd', ok: 'yes')
           }
         }
 
