@@ -23,6 +23,6 @@ pipeline {
 
   }
   environment {
-    b = ' sh label: \'\', script: \'\'\'b=`cat test.txt`           \'\'\''
+    b = 'hello'
   }
 }
